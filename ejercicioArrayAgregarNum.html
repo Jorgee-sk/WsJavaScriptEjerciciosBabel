@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Array ejs</title>
 </head>
+<script type="text/javascript">
+    
+    //Array que vamos a usar para rellenar (lo inicializamos vacío)
+    let array = []
+
+    function añadirElemento(){
+
+        let referenciaCampo1 = document.getElementById("campo1");
+        array.push(referenciaCampo1.value)
+        
+    }
+
+    function extractElem(){
+        var numAleatorio = (Math.round((Math.random() * 100) + 1))
+        console.log(numAleatorio)
+        let referenciaCampo2 = document.getElementById("campo2")
+        referenciaCampo2.value = array[numAleatorio]
+    }
+</script>
 <body>
+    <h1 style="text-align:center; text-transform: uppercase">Ejercicio 1. Añadir elemento a un array y extraer uno aleatorio</h1>
+    <div style="text-align:center">
+        <input  id="campo1" type="text" value="..."/> 
+        <button  onclick="añadirElemento()">Añade elemento al array</button>
+    </div>
+  
+    <br/>
+    <br/>
+    <div style="text-align:center">
+        <input id="campo2" type="text" value="..."/> 
+        <button onclick="extractElem()">Extraer elemento aleatorio</button>
+    </div>
     
 </body>
 </html>
