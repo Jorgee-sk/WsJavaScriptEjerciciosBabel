@@ -4,9 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora</title>
 </head>
+<script>
+
+    function sumar(){
+        
+        let referenciaCampo1 = document.getElementById("campo1");
+        let referenciaCampo2 = document.getElementById("campo2");
+
+        let num1 = parseInt(referenciaCampo1.value);
+        let num2 = parseInt(referenciaCampo2.value);
+
+
+        let resultado = document.getElementById("campo3");
+        resultado.value = num1 + num2;
+    }
+    function resta(n1,n2){
+        let referenciaCampo1 = document.getElementById("campo1");
+        let referenciaCampo2 = document.getElementById("campo2");
+
+        let num1 = parseInt(referenciaCampo1.value);
+        let num2 = parseInt(referenciaCampo2.value);
+
+        let resultado = document.getElementById("campo3");
+        resultado.value = num1 - num2;
+    }
+    function multiplicar(n1,n2){
+        let referenciaCampo1 = document.getElementById("campo1");
+        let referenciaCampo2 = document.getElementById("campo2");
+
+        let num1 = parseInt(referenciaCampo1.value);
+        let num2 = parseInt(referenciaCampo2.value);
+
+        let resultado = document.getElementById("campo3");
+        resultado.value = num1 * num2;
+    }
+    function division(n1,n2){
+        let referenciaCampo1 = document.getElementById("campo1");
+        let referenciaCampo2 = document.getElementById("campo2");
+
+        let num1 = parseInt(referenciaCampo1.value);
+        let num2 = parseInt(referenciaCampo2.value);
+        
+        let resultado = document.getElementById("campo3");
+        resultado.value = num1/num2;
+    }
+
+</script>
 <body>
-    
+    <h1 style="text-align: center; text-transform: uppercase;">Ejercicio calculadora</h1>
+    <div style="text-align: center;">
+        <input id="campo1" type="text" value="..."/> 
+        <input id="campo2" type="text" value="..."/> 
+    </div>
+  
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <button  onclick="sumar()">Suma</button>
+        <button  onclick="resta()">Resta</button>
+        <button  onclick="multiplicar()">Multiplicacion</button>
+        <button  onclick="division()">Division</button>
+    </div>
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <input id="campo3" type="text" value="..."/> 
+    </div>
+
 </body>
 </html>
